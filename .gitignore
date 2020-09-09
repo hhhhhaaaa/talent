@@ -6,6 +6,8 @@ npm-debug.log
 .DS_Store
 .env
 style.css
+personal-talent.PublishSettings
+stats.json
 
 # IntelliJ
 *.iml

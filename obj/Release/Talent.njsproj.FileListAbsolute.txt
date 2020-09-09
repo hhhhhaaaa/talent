@@ -1,0 +1,2 @@
+C:\Users\hathe\Documents\Repos\talent\obj\Release\Talent.njsproj.CoreCompileInputs.cache
+C:\Users\hathe\Documents\Repos\talent\bin\Microsoft.NodejsTools.WebRole.dll
