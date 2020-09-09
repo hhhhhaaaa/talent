@@ -45,7 +45,7 @@
   display: none;
 }
 
-input[type=checkbox]:checked + label ~ .talent-list {
+input[type='checkbox']:checked + label ~ .talent-list {
   display: block;
 }
 

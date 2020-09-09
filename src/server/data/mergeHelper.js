@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const allLearners = [];
 
 const buildLearners = () => {
@@ -8,24 +9,28 @@ const buildLearners = () => {
     }
 
     let count = 0;
+    const increaseCount = 1;
+
     files.forEach((file) => {
-      let data = require(`./learners/${file}`);
+      const data = require(`./learners/${file}`);
+
       data.id = count;
-      count++;
+      count += increaseCount;
       data.projects.forEach((project) => {
         project.id = count;
-        count++;
+        count += increaseCount;
       });
       data.skills.forEach((skill) => {
         skill.id = count;
-        count++;
+        count += increaseCount;
       });
       data.experience.forEach((exp) => {
         exp.id = count;
-        count++;
+        count += increaseCount;
       });
       allLearners.push(data);
     });
+
     return allLearners;
   });
 };

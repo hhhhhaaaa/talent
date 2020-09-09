@@ -1,4 +1,5 @@
 const fs = require('fs');
+
 const learner = {};
 
 const makeLearner = () => {
@@ -7,10 +8,12 @@ const makeLearner = () => {
   learner.twitter = 'most blah';
   learner.name = 'name blah';
   learner.story = 'story blah';
-  learner.projects = [{
-    'title': 'title blah',
-    "link": "blah"
-  }];
+  learner.projects = [
+    {
+      link: 'blah',
+      title: 'title blah',
+    },
+  ];
   learner.skills = [];
   learner.experience = [];
   learner.alumni = false;

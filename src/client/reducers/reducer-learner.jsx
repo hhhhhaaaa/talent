@@ -1,12 +1,6 @@
-import {
-  FETCH_LEARNERS,
-  DONE_LOADING,
-  SET_SKILLS,
-  SEARCH_BY_SKILL,
-  SEARCH_BY_NAME
-} from '../actions/types';
+import { FETCH_LEARNERS, DONE_LOADING, SET_SKILLS, SEARCH_BY_SKILL, SEARCH_BY_NAME } from '../actions/types';
 
-export default function(state = { loading: true }, action) {
+export default function (state = { loading: true }, action) {
   switch (action.type) {
     case FETCH_LEARNERS:
       return {
@@ -41,6 +35,6 @@ export default function(state = { loading: true }, action) {
         skillSearch: !action.payload,
         nameSearch: action.payload,
       };
-    }
+  }
   return state;
 }

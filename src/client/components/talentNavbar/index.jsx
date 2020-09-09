@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar';
 import './index.css';
 
 export default class TalentNavbar extends Component {
-
   render() {
     return (
       <div className="talent-container">
-        <Navbar className="talent-navbar" fixedTop>
-          <Navbar.Header>
+        <Navbar className="talent-navbar" fixedtop="true">
             <Navbar.Brand>
               <input type="checkbox" name="hamburger" id="hamburger"></input>
               <label htmlFor="hamburger" className="navbar-icon glyphicon glyphicon-menu-hamburger"></label>
               <h2 className="navbar-title">TALENT</h2>
-              <div className="talent-list">{
+              <div className="talent-list">
+                {
                   <ul className="talent-nav">
                     <li className="talent-item">
                       <Link to="/">Home</Link>
@@ -35,7 +34,6 @@ export default class TalentNavbar extends Component {
                 }
               </div>
             </Navbar.Brand>
-          </Navbar.Header>
         </Navbar>
       </div>
     );

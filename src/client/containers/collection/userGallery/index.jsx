@@ -8,7 +8,7 @@ export default class UserGallery extends Component {
       <div>
         <h2 className="text-center">Learners</h2>
         <div className="learner-image-container">
-          <UserBadge data={this.props.data}/>
+          <UserBadge data={this.props.data} />
         </div>
       </div>
     );

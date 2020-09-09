@@ -17,8 +17,15 @@ class SkillsSearch extends Component {
     return Object.keys(this.props.guild.skills).map((skill, index) => {
       return (
         <li className="list-group-item" key={index}>
-          <label> {skill}:
-            <input type="checkbox" name={skill} value={this.props.guild.skills[skill]} onChange={this.handleChange}></input>
+          <label>
+            {' '}
+            {skill}:
+            <input
+              type="checkbox"
+              name={skill}
+              value={this.props.guild.skills[skill]}
+              onChange={this.handleChange}
+            ></input>
           </label>
         </li>
       );
@@ -71,16 +78,14 @@ class SkillsSearch extends Component {
     return (
       <div>
         <form>
-          <ul className="list-group">
-            {this.renderExperienceList()}
-          </ul>
+          <ul className="list-group">{this.renderExperienceList()}</ul>
           <Link to={`/skillsresults/search=${this.findLearners()}`}>
             <input ref="submitButton" type="submit" value="Submit"></input>
           </Link>
         </form>
         <div className="footer-filler"></div>
       </div>
-  );
+    );
   }
 }
 
