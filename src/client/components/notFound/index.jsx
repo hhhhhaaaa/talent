@@ -5,7 +5,7 @@ export default class NotFound extends Component {
     return (
       <div>
         <p> Page Not Found</p>
-        <img src="/Page-Not-Found.jpg"/>
+        <img src="/Page-Not-Found.jpg" />
         <div className="footer-filler"></div>
       </div>
     );

@@ -10,13 +10,13 @@ html {
   display: none;
 }
 
-input[type=checkbox] + label {
+input[type='checkbox'] + label {
   height: 3rem;
   width: 3rem;
   padding: 0 0 0 0;
 }
 
-input[type=checkbox]:checked + label {
+input[type='checkbox']:checked + label {
   height: 3rem;
   width: 3rem;
 }

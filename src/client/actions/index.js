@@ -1,43 +1,39 @@
-import {
-  FETCH_LEARNERS,
-  SET_SKILLS,
-  DONE_LOADING,
-  SEARCH_BY_SKILL,
-  SEARCH_BY_NAME
-} from './types'
+import { FETCH_LEARNERS, SET_SKILLS, DONE_LOADING, SEARCH_BY_SKILL, SEARCH_BY_NAME } from './types';
 
-export function fetchLearners(allLearners) {
+function fetchLearners(allLearners) {
   return {
-    type: FETCH_LEARNERS,
-    payload: allLearners,
     loading: true,
+    payload: allLearners,
+    type: FETCH_LEARNERS,
   };
 }
 
-export function setSkills(allSkills) {
+function setSkills(allSkills) {
   return {
-    type: SET_SKILLS,
     skills: allSkills,
+    type: SET_SKILLS,
   };
 }
 
-export function doneLoading() {
+function doneLoading() {
   return {
-    type: DONE_LOADING,
     loading: false,
+    type: DONE_LOADING,
   };
 }
 
-export function searchBySkill() {
+function searchBySkill() {
   return {
+    payload: true,
     type: SEARCH_BY_SKILL,
-    payload: true,
   };
 }
 
-export function searchByName() {
+function searchByName() {
   return {
-    type: SEARCH_BY_NAME,
     payload: true,
+    type: SEARCH_BY_NAME,
   };
 }
+
+export { fetchLearners, setSkills, doneLoading, searchBySkill, searchByName };

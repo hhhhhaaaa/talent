@@ -4,9 +4,8 @@
     "\\src",
     "\\src\\client",
     "\\src\\client\\components",
-    "\\src\\client\\components\\app",
-    "\\src\\server"
+    "\\src\\client\\components\\app"
   ],
-  "SelectedNode": "\\src\\server\\server.js",
+  "SelectedNode": "\\package.json",
   "PreviewInSolutionExplorer": false
 }

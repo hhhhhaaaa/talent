@@ -62,8 +62,14 @@ class SplashRNG extends Component {
     return (
       <div>
         <LandingPage projectsArray={this.state.selectedProjects} learnersArray={this.state.selectedLearners} />
-        <button className="more-projects-button" onClick={this.handleClickProjects}> See More Projects </button>
-        <button className="more-learners-button" onClick={this.handleClickLearners}> See More Learners </button>
+        <button className="more-projects-button" onClick={this.handleClickProjects}>
+          {' '}
+          See More Projects{' '}
+        </button>
+        <button className="more-learners-button" onClick={this.handleClickLearners}>
+          {' '}
+          See More Learners{' '}
+        </button>
       </div>
     );
   }

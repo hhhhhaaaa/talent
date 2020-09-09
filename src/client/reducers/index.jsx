@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux'
-import LearnerReducer from './reducer-learner'
+import { combineReducers } from 'redux';
+import LearnerReducer from './reducer-learner';
 
 const rootReducer = combineReducers({
   guild: LearnerReducer,

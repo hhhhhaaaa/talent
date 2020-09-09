@@ -4,10 +4,12 @@ import './index.css';
 
 export default class UserBadge extends Component {
   render() {
-    return this.props.data.map(learner => {
+    return this.props.data.map((learner) => {
       return (
         <span key={learner.id} className="learner-span">
-          <Link to={`/learners/${learner.github_handle}`}><img className="img-responsive" src="/LearnerImage.png" /> </Link>
+          <Link to={`/learners/${learner.github_handle}`}>
+            <img className="img-responsive" src="/LearnerImage.png" />{' '}
+          </Link>
           <p className="text-center">{learner.name}</p>
         </span>
       );

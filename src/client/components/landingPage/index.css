@@ -201,38 +201,38 @@
 }
 
 @media only screen and (width: 667px) {
-    .about-image-container {
-      position: relative;
-      top: 4.5rem;
-    }
+  .about-image-container {
+    position: relative;
+    top: 4.5rem;
+  }
 
-    .projects-title {
-      top: 16rem;
-    }
+  .projects-title {
+    top: 16rem;
+  }
 
-    .teal-triangle1 {
-      width: 35rem;
-      height: 26rem;
-    }
+  .teal-triangle1 {
+    width: 35rem;
+    height: 26rem;
+  }
 
-    .teal-triangle2 {
-      width: 35rem;
-      height: 26rem;
-      left: 39.15rem;
-    }
+  .teal-triangle2 {
+    width: 35rem;
+    height: 26rem;
+    left: 39.15rem;
+  }
 
-    .more-projects-button {
-      width: 10rem;
-      height: 4rem;
-      top: -82rem;
-      left: 60rem;
-    }
+  .more-projects-button {
+    width: 10rem;
+    height: 4rem;
+    top: -82rem;
+    left: 60rem;
+  }
 
-    .more-learners-button {
-      width: 10rem;
-      height: 4rem;
-      left: -2.5rem;
-    }
+  .more-learners-button {
+    width: 10rem;
+    height: 4rem;
+    left: -2.5rem;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
