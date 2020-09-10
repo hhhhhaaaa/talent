@@ -1,0 +1,3 @@
+C:\Users\hathe\Documents\Repos\talent\obj\Debug\Talent.njsproj.CoreCompileInputs.cache
+C:\Users\hathe\Documents\Repos\talent\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\hathe\Documents\Repos\talent\obj\Debug\Talent.njsprojAssemblyReference.cache

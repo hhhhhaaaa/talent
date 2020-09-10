@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4d2a9812-19e6-4eb5-aa8a-4c2c8c7daf91}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>dist\bundle.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <StartWebBrowser>True</StartWebBrowser>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <NodeExePath>C:\Users\hathe\AppData\Roaming\nvm\v14.9.0\node.exe</NodeExePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="app.json" />
+    <Content Include="package.json" />
+    <Content Include="architecture-design.md" />
+    <Content Include="README.md" />
+    <Content Include=".babelrc.js" />
+    <Content Include=".eslintrc.js" />
+    <Content Include="config.js" />
+    <Content Include="webpack.config.js" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\bundle.js" />
+    <Content Include="public\index.html" />
+    <Content Include="public\bundle.js" />
+    <Content Include="__tests__\preHelper.js" />
+    <Content Include="__tests__\testHelper.js" />
+    <Content Include="obj\Debug\Talent.njsproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Talent.njsproj.FileListAbsolute.txt" />
+    <Content Include="src\client\index.jsx" />
+    <Content Include="src\server\server.js" />
+    <Content Include="src\client\actions\index.js" />
+    <Content Include="src\client\actions\types.js" />
+    <Content Include="src\client\reducers\index.jsx" />
+    <Content Include="src\client\reducers\reducer-learner.jsx" />
+    <Content Include="src\client\components\app\index.css" />
+    <Content Include="src\client\components\app\index.jsx" />
+    <Content Include="src\client\components\blurb\index.jsx" />
+    <Content Include="src\client\components\errorBoundary\index.jsx" />
+    <Content Include="src\client\components\footer\index.css" />
+    <Content Include="src\client\components\footer\index.jsx" />
+    <Content Include="src\client\components\landingPage\index.css" />
+    <Content Include="src\client\components\landingPage\index.jsx" />
+    <Content Include="src\client\components\list\index.jsx" />
+    <Content Include="src\client\components\notFound\index.jsx" />
+    <Content Include="src\client\components\projects\index.css" />
+    <Content Include="src\client\components\projects\index.jsx" />
+    <Content Include="src\client\components\scrollToTop\index.jsx" />
+    <Content Include="src\client\components\talentNavbar\index.css" />
+    <Content Include="src\client\components\talentNavbar\index.jsx" />
+    <Content Include="src\client\containers\collection\index.css" />
+    <Content Include="src\client\containers\collection\index.jsx" />
+    <Content Include="src\client\containers\learnerGallery\index.jsx" />
+    <Content Include="src\client\containers\loading\index.css" />
+    <Content Include="src\client\containers\loading\index.jsx" />
+    <Content Include="src\client\containers\profile\index.css" />
+    <Content Include="src\client\containers\profile\index.jsx" />
+    <Content Include="src\client\containers\skillsSearch\index.jsx" />
+    <Content Include="src\client\containers\splashRNG\index.jsx" />
+    <Content Include="src\client\containers\collection\userBadge\index.css" />
+    <Content Include="src\client\containers\collection\userBadge\index.jsx" />
+    <Content Include="src\client\containers\collection\userGallery\index.css" />
+    <Content Include="src\client\containers\collection\userGallery\index.jsx" />
+    <Content Include="src\client\containers\profile\profile\index.jsx" />
+    <Content Include="src\server\data\schema.json" />
+    <Content Include="src\server\data\makeLearner.js" />
+    <Content Include="src\server\data\mergeHelper.js" />
+    <Content Include="src\server\data\validate.js" />
+    <Content Include="src\server\routes\apiRoutes.js" />
+    <Content Include="src\server\routes\index.jsx" />
+    <Content Include="src\server\data\learners\DouglasLubaway.json" />
+    <Content Include="src\server\data\learners\JohnathonLubaway.json" />
+    <Content Include="src\server\data\learners\PatrickKallas.json" />
+    <Content Include="__tests__\endToEnd\test.js" />
+    <Content Include="__tests__\integration\test.js" />
+    <Content Include="__tests__\testingEnvironment\actions\indexHelper.js" />
+    <Content Include="__tests__\testingEnvironment\data\indexHelper.js" />
+    <Content Include="__tests__\testingEnvironment\reducers\indexHelper.js" />
+    <Content Include="__tests__\testingEnvironment\reducers\reducer-learnerHelper.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="__tests__" />
+    <Folder Include="__tests__\endToEnd" />
+    <Folder Include="__tests__\integration" />
+    <Folder Include="__tests__\testingEnvironment" />
+    <Folder Include="__tests__\testingEnvironment\actions" />
+    <Folder Include="__tests__\testingEnvironment\data" />
+    <Folder Include="__tests__\testingEnvironment\reducers" />
+    <Folder Include="bin" />
+    <Folder Include="dist" />
+    <Folder Include="obj" />
+    <Folder Include="obj\Debug" />
+    <Folder Include="obj\Release" />
+    <Folder Include="public" />
+    <Folder Include="src" />
+    <Folder Include="src\client" />
+    <Folder Include="src\client\actions" />
+    <Folder Include="src\client\components" />
+    <Folder Include="src\client\components\app" />
+    <Folder Include="src\client\components\blurb" />
+    <Folder Include="src\client\components\errorBoundary" />
+    <Folder Include="src\client\components\footer" />
+    <Folder Include="src\client\components\landingPage" />
+    <Folder Include="src\client\components\list" />
+    <Folder Include="src\client\components\notFound" />
+    <Folder Include="src\client\components\projects" />
+    <Folder Include="src\client\components\scrollToTop" />
+    <Folder Include="src\client\components\talentNavbar" />
+    <Folder Include="src\client\containers" />
+    <Folder Include="src\client\containers\collection" />
+    <Folder Include="src\client\containers\collection\userBadge" />
+    <Folder Include="src\client\containers\collection\userGallery" />
+    <Folder Include="src\client\containers\learnerGallery" />
+    <Folder Include="src\client\containers\loading" />
+    <Folder Include="src\client\containers\profile" />
+    <Folder Include="src\client\containers\profile\profile" />
+    <Folder Include="src\client\containers\skillsSearch" />
+    <Folder Include="src\client\containers\splashRNG" />
+    <Folder Include="src\client\reducers" />
+    <Folder Include="src\server" />
+    <Folder Include="src\server\data" />
+    <Folder Include="src\server\data\learners" />
+    <Folder Include="src\server\routes" />
+    <Folder Include="Talent" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
