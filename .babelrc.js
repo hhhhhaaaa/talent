@@ -7,6 +7,12 @@ module.exports = {
         "corejs": false,
         "regenerator":  true
       }
-    ]
+      ],
+      [
+          "react-css-modules"
+      ],
+      [
+          "transform-class-properties"
+      ]
   ]
 }

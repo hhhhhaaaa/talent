@@ -1,4 +1,4 @@
-import router from './routes/index.jsx';
+import router from '../src/mead/routes/index.jsx';
 
 const express = require('express');
 const path = require('path');
@@ -7,7 +7,7 @@ const app = express();
 
 export const port = process.env.PORT || 3000;
 
-const assets = express.static(path.resolve(__dirname, './../../public/'));
+const assets = express.static(path.resolve(__dirname, '../../distNear/'));
 
 app.use(assets);
 app.use('/', router);
