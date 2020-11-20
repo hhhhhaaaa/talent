@@ -19,21 +19,192 @@
     <NodeExeArguments>
     </NodeExeArguments>
     <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include=".github\PULL_REQUEST_TEMPLATE.md" />
     <Content Include="app.json" />
+    <Content Include="bootstrap\js\dist\alert.js" />
+    <Content Include="bootstrap\js\dist\alert.js.map" />
+    <Content Include="bootstrap\js\dist\button.js" />
+    <Content Include="bootstrap\js\dist\button.js.map" />
+    <Content Include="bootstrap\js\dist\carousel.js" />
+    <Content Include="bootstrap\js\dist\carousel.js.map" />
+    <Content Include="bootstrap\js\dist\collapse.js" />
+    <Content Include="bootstrap\js\dist\collapse.js.map" />
+    <Content Include="bootstrap\js\dist\dropdown.js" />
+    <Content Include="bootstrap\js\dist\dropdown.js.map" />
+    <Content Include="bootstrap\js\dist\index.js" />
+    <Content Include="bootstrap\js\dist\index.js.map" />
+    <Content Include="bootstrap\js\dist\modal.js" />
+    <Content Include="bootstrap\js\dist\modal.js.map" />
+    <Content Include="bootstrap\js\dist\popover.js" />
+    <Content Include="bootstrap\js\dist\popover.js.map" />
+    <Content Include="bootstrap\js\dist\scrollspy.js" />
+    <Content Include="bootstrap\js\dist\scrollspy.js.map" />
+    <Content Include="bootstrap\js\dist\tab.js" />
+    <Content Include="bootstrap\js\dist\tab.js.map" />
+    <Content Include="bootstrap\js\dist\tooltip.js" />
+    <Content Include="bootstrap\js\dist\tooltip.js.map" />
+    <Content Include="bootstrap\js\dist\util.js" />
+    <Content Include="bootstrap\js\dist\util.js.map" />
+    <Content Include="bootstrap\js\src\alert.js" />
+    <Content Include="bootstrap\js\src\button.js" />
+    <Content Include="bootstrap\js\src\carousel.js" />
+    <Content Include="bootstrap\js\src\collapse.js" />
+    <Content Include="bootstrap\js\src\dropdown.js" />
+    <Content Include="bootstrap\js\src\index.js" />
+    <Content Include="bootstrap\js\src\modal.js" />
+    <Content Include="bootstrap\js\src\popover.js" />
+    <Content Include="bootstrap\js\src\scrollspy.js" />
+    <Content Include="bootstrap\js\src\tab.js" />
+    <Content Include="bootstrap\js\src\tooltip.js" />
+    <Content Include="bootstrap\js\src\util.js" />
+    <Content Include="bootstrap\js\tests\index.html" />
+    <Content Include="bootstrap\js\tests\karma.conf.js" />
+    <Content Include="bootstrap\js\tests\README.md" />
+    <Content Include="bootstrap\js\tests\unit\.eslintrc.json" />
+    <Content Include="bootstrap\js\tests\unit\alert.js" />
+    <Content Include="bootstrap\js\tests\unit\button.js" />
+    <Content Include="bootstrap\js\tests\unit\carousel.js" />
+    <Content Include="bootstrap\js\tests\unit\collapse.js" />
+    <Content Include="bootstrap\js\tests\unit\dropdown.js" />
+    <Content Include="bootstrap\js\tests\unit\modal.js" />
+    <Content Include="bootstrap\js\tests\unit\popover.js" />
+    <Content Include="bootstrap\js\tests\unit\scrollspy.js" />
+    <Content Include="bootstrap\js\tests\unit\tab.js" />
+    <Content Include="bootstrap\js\tests\unit\tooltip.js" />
+    <Content Include="bootstrap\js\tests\unit\util.js" />
+    <Content Include="bootstrap\js\tests\vendor\jquery-1.9.1.min.js" />
+    <Content Include="bootstrap\js\tests\vendor\qunit.css" />
+    <Content Include="bootstrap\js\tests\vendor\qunit.js" />
+    <Content Include="bootstrap\js\tests\visual\alert.html" />
+    <Content Include="bootstrap\js\tests\visual\button.html" />
+    <Content Include="bootstrap\js\tests\visual\carousel.html" />
+    <Content Include="bootstrap\js\tests\visual\collapse.html" />
+    <Content Include="bootstrap\js\tests\visual\dropdown.html" />
+    <Content Include="bootstrap\js\tests\visual\modal.html" />
+    <Content Include="bootstrap\js\tests\visual\popover.html" />
+    <Content Include="bootstrap\js\tests\visual\scrollspy.html" />
+    <Content Include="bootstrap\js\tests\visual\tab.html" />
+    <Content Include="bootstrap\js\tests\visual\tooltip.html" />
+    <Content Include="bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="bootstrap\scss\bootstrap.scss" />
+    <Content Include="bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="bootstrap\scss\mixins\_background-variant.scss" />
+    <Content Include="bootstrap\scss\mixins\_badge.scss" />
+    <Content Include="bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="bootstrap\scss\mixins\_float.scss" />
+    <Content Include="bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="bootstrap\scss\mixins\_grid-framework.scss" />
+    <Content Include="bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="bootstrap\scss\mixins\_hover.scss" />
+    <Content Include="bootstrap\scss\mixins\_image.scss" />
+    <Content Include="bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="bootstrap\scss\mixins\_nav-divider.scss" />
+    <Content Include="bootstrap\scss\mixins\_navbar-align.scss" />
+    <Content Include="bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="bootstrap\scss\mixins\_screen-reader.scss" />
+    <Content Include="bootstrap\scss\mixins\_size.scss" />
+    <Content Include="bootstrap\scss\mixins\_table-row.scss" />
+    <Content Include="bootstrap\scss\mixins\_text-emphasis.scss" />
+    <Content Include="bootstrap\scss\mixins\_text-hide.scss" />
+    <Content Include="bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="bootstrap\scss\mixins\_visibility.scss" />
+    <Content Include="bootstrap\scss\utilities\_align.scss" />
+    <Content Include="bootstrap\scss\utilities\_background.scss" />
+    <Content Include="bootstrap\scss\utilities\_borders.scss" />
+    <Content Include="bootstrap\scss\utilities\_clearfix.scss" />
+    <Content Include="bootstrap\scss\utilities\_display.scss" />
+    <Content Include="bootstrap\scss\utilities\_embed.scss" />
+    <Content Include="bootstrap\scss\utilities\_flex.scss" />
+    <Content Include="bootstrap\scss\utilities\_float.scss" />
+    <Content Include="bootstrap\scss\utilities\_position.scss" />
+    <Content Include="bootstrap\scss\utilities\_screenreaders.scss" />
+    <Content Include="bootstrap\scss\utilities\_sizing.scss" />
+    <Content Include="bootstrap\scss\utilities\_spacing.scss" />
+    <Content Include="bootstrap\scss\utilities\_text.scss" />
+    <Content Include="bootstrap\scss\utilities\_visibility.scss" />
+    <Content Include="bootstrap\scss\_alert.scss" />
+    <Content Include="bootstrap\scss\_badge.scss" />
+    <Content Include="bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="bootstrap\scss\_button-group.scss" />
+    <Content Include="bootstrap\scss\_buttons.scss" />
+    <Content Include="bootstrap\scss\_card.scss" />
+    <Content Include="bootstrap\scss\_carousel.scss" />
+    <Content Include="bootstrap\scss\_close.scss" />
+    <Content Include="bootstrap\scss\_code.scss" />
+    <Content Include="bootstrap\scss\_custom-forms.scss" />
+    <Content Include="bootstrap\scss\_dropdown.scss" />
+    <Content Include="bootstrap\scss\_forms.scss" />
+    <Content Include="bootstrap\scss\_functions.scss" />
+    <Content Include="bootstrap\scss\_grid.scss" />
+    <Content Include="bootstrap\scss\_images.scss" />
+    <Content Include="bootstrap\scss\_input-group.scss" />
+    <Content Include="bootstrap\scss\_jumbotron.scss" />
+    <Content Include="bootstrap\scss\_list-group.scss" />
+    <Content Include="bootstrap\scss\_media.scss" />
+    <Content Include="bootstrap\scss\_mixins.scss" />
+    <Content Include="bootstrap\scss\_modal.scss" />
+    <Content Include="bootstrap\scss\_nav.scss" />
+    <Content Include="bootstrap\scss\_navbar.scss" />
+    <Content Include="bootstrap\scss\_pagination.scss" />
+    <Content Include="bootstrap\scss\_popover.scss" />
+    <Content Include="bootstrap\scss\_print.scss" />
+    <Content Include="bootstrap\scss\_progress.scss" />
+    <Content Include="bootstrap\scss\_reboot.scss" />
+    <Content Include="bootstrap\scss\_root.scss" />
+    <Content Include="bootstrap\scss\_tables.scss" />
+    <Content Include="bootstrap\scss\_tooltip.scss" />
+    <Content Include="bootstrap\scss\_transitions.scss" />
+    <Content Include="bootstrap\scss\_type.scss" />
+    <Content Include="bootstrap\scss\_utilities.scss" />
+    <Content Include="bootstrap\scss\_variables.scss" />
+    <Content Include="distAnt\backBundle.js" />
+    <Content Include="distAnt\index.html" />
+    <Content Include="distAnt\index.scss" />
+    <Content Include="distNear\frontBundle.js" />
+    <Content Include="distNear\index.html" />
+    <Content Include="distNear\index.scss" />
+    <Content Include="dist\server.js" />
+    <Content Include=".env">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="postcss.config.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="package.json" />
     <Content Include="architecture-design.md" />
     <Content Include="README.md" />
-    <Content Include=".babelrc.js" />
-    <Content Include=".eslintrc.js" />
     <Content Include="config.js" />
+    <Content Include="src\client\configureStore.jsx">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\mead\middleware\logger.jsx">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\mead\reducers\monitorReducer.jsx">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\mead\routes\appRender.jsx">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tsconfig.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="webpack-back.config.js" />
@@ -94,7 +265,23 @@
     <Content Include="__tests__\testingEnvironment\reducers\reducer-learnerHelper.js" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include=".github\" />
+    <Folder Include="bootstrap\" />
+    <Folder Include="bootstrap\js\" />
+    <Folder Include="bootstrap\js\dist\" />
+    <Folder Include="bootstrap\js\src\" />
+    <Folder Include="bootstrap\js\tests\" />
+    <Folder Include="bootstrap\js\tests\unit\" />
+    <Folder Include="bootstrap\js\tests\vendor\" />
+    <Folder Include="bootstrap\js\tests\visual\" />
+    <Folder Include="bootstrap\scss\" />
+    <Folder Include="bootstrap\scss\mixins\" />
+    <Folder Include="bootstrap\scss\utilities\" />
+    <Folder Include="distAnt\" />
+    <Folder Include="distNear\" />
+    <Folder Include="dist\" />
     <Folder Include="src\mead\" />
+    <Folder Include="src\mead\middleware\" />
     <Folder Include="__tests__" />
     <Folder Include="__tests__\endToEnd" />
     <Folder Include="__tests__\integration" />
@@ -137,6 +324,11 @@
     <Folder Include="src\server\data\learners" />
     <Folder Include="src\mead\routes\" />
     <Folder Include="Talent" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="TypeScript.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />

@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
     plugins: [
         require('postcss-import'),
         require('postcss-url'),
@@ -8,5 +8,5 @@ module.exports = {
         }),
         require('precss'),
         require('autoprefixer'),
-    ]
-}
+    ],
+};

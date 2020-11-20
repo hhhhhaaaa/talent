@@ -1,34 +1,34 @@
-module.exports = (function() {
+﻿function configuration() {
   let config = {};
 
-  const getEnv = () => {
+  function getEnv() {
     return process.env.NODE_ENV;
-  };
+  }
 
-  const makeConfig = () => {
+  function makeConfig() {
     if (getEnv() === 'development') {
-      console.log("Entering Development");
-      require('dotenv').config({path: __dirname + '/../../.env'});
+      console.log('Entering Development');
+      require('dotenv').config({ path: __dirname + '/../../.env' });
     } else if (getEnv() === 'test') {
-      console.log("Entering Test");
+      console.log('Entering Test');
       require('../../test/helpers/testing-setup');
     }
     // Dotenv reads env file and puts in on the env.
 
     config = {
-      port: process.env.PORT
+      port: process.env.PORT,
     };
     return config;
-  };
+  }
 
-  const getConfig = () => {
+  function getConfig() {
     return config;
   };
 
   makeConfig();
 
   return {
+    getConfig,
     getEnv,
-    getConfig
   };
-})();
+};
