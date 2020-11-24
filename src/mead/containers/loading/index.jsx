@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchLearners, setSkills, searchByName, doneLoading } from '../../actions';
+import { fetchLearners, setSkills, searchByName, doneLoading } from '../../actions/index.jsx';
 import axios from 'axios';
 import './index.scss';
 
@@ -9,32 +9,34 @@ class Loading extends Component {
   componentDidMount() {
     axios
       .get('http://localhost:3000/api/learners')
-      .then((response) => response.data)
-      .then((data) => this.props.fetchLearners(data))
-      .then(() => this.props.searchByName())
+      .then(response => response.data)
+      .then(data => this.fetchLearners(data))
+      .then(() => this.searchByName())
       .then(() => this.establishNames())
-      .then((skills) => this.props.setSkills(skills))
-      .then(() => this.props.doneLoading())
-      .catch((error) => {
-        this.props.doneLoading();
+      .then(skills => this.setSkills(skills))
+      .then(() => this.doneLoading())
+      .catch(error => {
+        this.doneLoading();
         console.log('Error fetching and parsing data: ', error);
         throw error;
       });
   }
 
   establishNames() {
-    const inputNames = this.filterDuplicates().map((skill) => skill);
+    const inputNames = this.filterDuplicates().map(skill => skill);
     let tempObj = {};
     let objectNames = inputNames.map((skill, index) => {
       tempObj[`${skill}`] = 'off';
       return tempObj;
     });
+
     return tempObj;
   }
 
   filterDuplicates() {
     const uniqueSkills = [];
-    this.grabSkills().forEach((skill) => {
+
+    this.grabSkills().forEach(skill => {
       if (uniqueSkills.includes(skill)) {
         return;
       } else {
@@ -46,8 +48,9 @@ class Loading extends Component {
 
   grabSkills() {
     const listOfSkills = [];
-    this.props.guild.learners.forEach((learner) => {
-      return learner.skills.forEach((skill) => {
+
+    this.guild.learners.forEach(learner => {
+      return learner.skills.forEach(skill => {
         listOfSkills.push(skill.skills);
       });
     });
@@ -57,16 +60,16 @@ class Loading extends Component {
   render() {
     return (
       <div>
-        {this.props.guild.loading ? (
+        {this.guild.loading ? (
           <div>
             <div className="flex-center">
               <img className="lg-loading" src="/LearnerLogo.png" />
             </div>
-            <div className="footer-filler"></div>
+            <div className="footer-filler" />
           </div>
         ) : (
-          this.props.children
-        )}
+            this.children
+          )}
       </div>
     );
   }
@@ -77,7 +80,7 @@ function mapStateToProps({ guild }) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchLearners, setSkills, doneLoading, searchByName }, dispatch);
+  return bindActionCreators({ doneLoading, fetchLearners, searchByName, setSkills }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Loading);

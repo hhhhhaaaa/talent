@@ -2,14 +2,15 @@
 import thunkMiddleware from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import loggerMiddleware from '../mead/middleware/logger';
-import monitorReducer from '../mead/reducers/monitorReducer';
-import rootReducer from '../mead/reducers/index';
+import loggerMiddleware from '../mead/middleware/logger.jsx';
+import monitorReducer from '../mead/reducers/monitorReducer.jsx';
+import rootReducer from '../mead/reducers/index.jsx';
 
 /**
- * configureStore
- * @param {function} preloadedState - The pre-loaded version of the State.
- * @returns {function} state - The state for use.
+ * configureStore(); // Configures store.
+ *
+ * @param {any} preloadedState - The pre-loaded version of the State.
+ * @returns {any} state - The state for use.
  */
 export default function configureStore(preloadedState) {
   const middlewares = [loggerMiddleware, thunkMiddleware];

@@ -1,4 +1,4 @@
-import { FETCH_LEARNERS, DONE_LOADING, SET_SKILLS, SEARCH_BY_SKILL, SEARCH_BY_NAME } from '../actions/types';
+﻿import { FETCH_LEARNERS, DONE_LOADING, SET_SKILLS, SEARCH_BY_SKILL, SEARCH_BY_NAME } from '../actions/types.jsx';
 
 export default function (state = { loading: true }, action) {
   switch (action.type) {

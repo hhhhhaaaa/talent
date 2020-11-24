@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Navbar } from 'react-bootstrap';
+﻿import React, { Component } from 'react';
 import './index.scss';
 
+/* eslint-disable react/prefer-stateless-function */
 export default class Footer extends Component {
   render() {
     return (

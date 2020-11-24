@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import TalentNavbar from '../talentNavbar/index.jsx';
 import NotFound from '../notFound/index.jsx';
@@ -13,6 +13,7 @@ import Footer from '../footer/index.jsx';
 import './index.scss';
 import '../../../../bootstrap/scss/bootstrap.scss';
 
+/* eslint-disable react/prefer-stateless-function, no-unused-vars */
 export default class App extends Component {
   render() {
     return (
@@ -22,12 +23,12 @@ export default class App extends Component {
           <Loading>
             <Switch>
               <Route exact path="/" component={SplashRNG} />
-              <Route exact path="/current" render={(props) => <LearnerGallery type="current" />} />
-              <Route exact path="/learners" render={(props) => <LearnerGallery type="all" />} />
+              <Route exact path="/current" render={props => <LearnerGallery type="current" />} />
+              <Route exact path="/learners" render={props => <LearnerGallery type="all" />} />
               <Route exact path="/skillsresults/:searchSkill" component={LearnerGallery} />
               <Route exact path="/skills" component={SkillsSearch} />
               <Route exact path="/learners/:githubHandle" component={ProfilePage} />
-              <Route exact path="/alumni" render={(props) => <LearnerGallery type="alumni" />} />
+              <Route exact path="/alumni" render={props => <LearnerGallery type="alumni" />} />
               <Route component={NotFound} />
             </Switch>
           </Loading>

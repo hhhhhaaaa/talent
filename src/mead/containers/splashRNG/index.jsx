@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import LandingPage from '../../components/landingPage/index.jsx';
@@ -17,15 +17,15 @@ class SplashRNG extends Component {
 
   rngProjects() {
     let chosenProjects = [];
-    let maxNumber = this.props.guild.learners.length;
+    let maxNumber = this.guild.learners.length;
     for (let i = 0; i < 8; i++) {
       let rng = Math.floor(Math.random() * maxNumber);
-      if (chosenProjects.includes(this.props.guild.learners[rng].projects[0])) {
+      if (chosenProjects.includes(this.guild.learners[rng].projects[0])) {
         i--;
         continue;
       }
 
-      chosenProjects.push(this.props.guild.learners[rng].projects[0]);
+      chosenProjects.push(this.guild.learners[rng].projects[0]);
     }
 
     this.setState({ selectedProjects: chosenProjects });

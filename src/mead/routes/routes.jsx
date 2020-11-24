@@ -1,9 +1,9 @@
-import App from '../components/app/index.jsx'
+﻿import App from '../components/app/index.jsx';
 
 const routes = [
-    {
-        component: App
-    }
+  {
+    component: App,
+  },
 ];
 
 export default routes;

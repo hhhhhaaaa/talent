@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import Projects from '../projects/index.jsx';
 import UserBadge from '../../containers/collection/userBadge/index.jsx';
 import Blurb from '../blurb/index.jsx';
@@ -6,6 +6,7 @@ import './index.scss';
 
 const blurbInfo = { name: 'OUR LEARNERS', story: 'These are just a few of the many learners we have had here.' };
 
+/* eslint-disable no-magic-numbers */
 export default class LandingPage extends Component {
   render() {
     return (
@@ -14,12 +15,12 @@ export default class LandingPage extends Component {
           <h2 className="about-title">TALENT</h2>
         </div>
         <div className="about-container">
-          <img src="/Page-Not-Found.jpg" className="about-image-container"></img>
+          <img alt="A cute ghost with a 404 Page Not Found." src="/Page-Not-Found.jpg" className="about-image-container" />
           <div className="about-text">
             <h2>WHO WE ARE</h2>
             <p>
               Learners Guild is a 10 month experience that is open to anyone who wishes to make a start as a web
-              developer. Both the Guild and the Learners themselves endeavor to find the best way to push the Learner's
+              developer. Both the Guild and the Learners themselves endeavor to find the best way to push the Learner&apos;s
               skills and experience forward, through many facets. Self-guided and staff-guided learning both are
               encouraged, with individual and team based projects, numerous online instructional videos, and one-on-one
               support meetings. The culture is something to behold, a beacon that each Learner can use to depend on,
@@ -33,17 +34,17 @@ export default class LandingPage extends Component {
         </div>
         <div className="project-image-container">
           <div className="project-images">
-            <Projects projects={this.props.projectsArray.slice(0, 4)} />
+            <Projects projects={this.projectsArray.slice(0, 4)} />
           </div>
           <div className="project-images">
-            <Projects projects={this.props.projectsArray.slice(4, 8)} />
+            <Projects projects={this.projectsArray.slice(4, 8)} />
           </div>
         </div>
-        <div className="teal-triangle2"></div>
+        <div className="teal-triangle2" />
         <div className="landing-page-learners">
-          <Blurb info={blurbInfo}></Blurb>
+          <Blurb info={blurbInfo} />
           <div className="learner-image-container">
-            <UserBadge data={this.props.learnersArray}></UserBadge>
+            <UserBadge data={this.learnersArray} />
           </div>
         </div>
       </div>

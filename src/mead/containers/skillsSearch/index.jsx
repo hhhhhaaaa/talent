@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { setSkills } from '../../actions';
 import { Link } from 'react-router-dom';
+import { setSkills } from '../../actions/index.jsx';
 import LearnerGallery from '../learnerGallery/index.jsx';
 
 class SkillsSearch extends Component {
@@ -14,7 +14,7 @@ class SkillsSearch extends Component {
   }
 
   renderExperienceList() {
-    return Object.keys(this.props.guild.skills).map((skill, index) => {
+    return Object.keys(this.guild.skills).map((skill, index) => {
       return (
         <li className="list-group-item" key={index}>
           <label>
@@ -23,9 +23,9 @@ class SkillsSearch extends Component {
             <input
               type="checkbox"
               name={skill}
-              value={this.props.guild.skills[skill]}
+              value={this.guild.skills[skill]}
               onChange={this.handleChange}
-            ></input>
+            />
           </label>
         </li>
       );
@@ -36,8 +36,9 @@ class SkillsSearch extends Component {
     const target = event.target;
     const value = target.value === 'on' ? 'off' : 'on';
     const name = target.name;
-    const skills = this.props.guild.skills;
+    const skills = this.guild.skills;
     let newSkills = {};
+
     Object.keys(skills).map((skill, index) => {
       if (skill === name) {
         console.log(event.target.name, event.target.value);
@@ -50,21 +51,23 @@ class SkillsSearch extends Component {
         newSkills[`${skill}`] = skills[skill];
       }
     });
-    this.props.setSkills(newSkills);
+    this.setSkills(newSkills);
   }
 
   resetSkills() {
-    const skills = this.props.guild.skills;
+    const skills = this.guild.skills;
     let newSkills = {};
+
     Object.keys(skills).map((skill, index) => {
       newSkills[`${skill}`] = 'off';
     });
-    this.props.setSkills(newSkills);
+    this.setSkills(newSkills);
   }
 
   findLearners() {
-    const listedState = this.props.guild.skills;
+    const listedState = this.guild.skills;
     const checkedSkills = [];
+
     for (let key in listedState) {
       if (listedState[key] === 'on') {
         checkedSkills.push(key);
@@ -80,10 +83,10 @@ class SkillsSearch extends Component {
         <form>
           <ul className="list-group">{this.renderExperienceList()}</ul>
           <Link to={`/skillsresults/search=${this.findLearners()}`}>
-            <input ref="submitButton" type="submit" value="Submit"></input>
+            <input ref="submitButton" type="submit" value="Submit" />
           </Link>
         </form>
-        <div className="footer-filler"></div>
+        <div className="footer-filler" />
       </div>
     );
   }

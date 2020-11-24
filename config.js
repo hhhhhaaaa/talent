@@ -8,10 +8,10 @@
   function makeConfig() {
     if (getEnv() === 'development') {
       console.log('Entering Development');
-      require('dotenv').config({ path: __dirname + '/../../.env' });
+      require('dotenv').config({ path: __dirname + './.env' });
     } else if (getEnv() === 'test') {
       console.log('Entering Test');
-      require('../../test/helpers/testing-setup');
+      require('./test/testHelper.js');
     }
     // Dotenv reads env file and puts in on the env.
 

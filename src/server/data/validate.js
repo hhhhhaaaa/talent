@@ -1,5 +1,5 @@
-const fs = require('fs');
-const Ajv = require('Ajv');
+﻿const fs = require('fs');
+const Ajv = require('ajv');
 const schema = require('./schema.json');
 
 const ajv = new Ajv();
@@ -11,7 +11,7 @@ const checkLearners = () => {
       throw error;
     }
 
-    files.forEach((file) => {
+    files.forEach(file => {
       const data = require(`./learners/${file}`);
       const valid = validate(data);
 

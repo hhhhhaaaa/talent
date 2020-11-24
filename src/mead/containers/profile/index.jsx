@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import Profile from './profile/index.jsx';
@@ -8,7 +8,7 @@ import './index.scss';
 
 class ProfilePage extends Component {
   filterLearner(githubHandle) {
-    return this.props.guild.learners.filter((learner) => learner.github_handle === githubHandle);
+    return this.guild.learners.filter(learner => learner.github_handle === githubHandle);
   }
 
   handleClickLearners() {
@@ -16,7 +16,7 @@ class ProfilePage extends Component {
   }
 
   render() {
-    const githubHandle = this.props.match.url.replace(/\/learners\//, '');
+    const githubHandle = this.match.url.replace(/\/learners\//u, '');
     const selectedLearner = this.filterLearner(githubHandle)[0];
 
     return selectedLearner ? (
@@ -37,16 +37,18 @@ class ProfilePage extends Component {
         </div>
         <div className="row flex-center">
           <button className="hire-learner-button" onClick={this.handleClickHire}>
-            HIRE {selectedLearner.name.split(' ')[0]} TODAY
+            HIRE
+          {selectedLearner.name.split(' ')[0]}
+            TODAY
           </button>
         </div>
         <h2 className="text-center">Projects</h2>
         <Projects projects={selectedLearner.projects} />
-        <div className="footer-filler"></div>
+        <div className="footer-filler" />
       </div>
     ) : (
-      <Redirect to="/PageNotFound" />
-    );
+        <Redirect to="/PageNotFound" />
+      );
   }
 }
 

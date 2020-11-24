@@ -204,19 +204,20 @@
     <Content Include="src\mead\routes\appRender.jsx">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\mead\routes\HTML.jsx" />
     <Content Include="tsconfig.json">
       <SubType>Code</SubType>
     </Content>
     <Content Include="webpack-back.config.js" />
     <Content Include="webpack-front.config.js" />
-    <Content Include="__tests__\preHelper.js" />
-    <Content Include="__tests__\testHelper.js" />
+    <Content Include="test\preHelper.js" />
+    <Content Include="test\testHelper.js" />
     <Content Include="obj\Debug\Talent.njsproj.FileListAbsolute.txt" />
     <Content Include="obj\Release\Talent.njsproj.FileListAbsolute.txt" />
     <Content Include="src\client\index.jsx" />
     <Content Include="src\server\server.js" />
-    <Content Include="src\mead\actions\index.js" />
-    <Content Include="src\mead\actions\types.js" />
+    <Content Include="src\mead\actions\index.jsx" />
+    <Content Include="src\mead\actions\types.jsx" />
     <Content Include="src\mead\reducers\index.jsx" />
     <Content Include="src\mead\reducers\reducer-learner.jsx" />
     <Content Include="src\mead\components\app\index.scss" />
@@ -257,12 +258,12 @@
     <Content Include="src\server\data\learners\DouglasLubaway.json" />
     <Content Include="src\server\data\learners\JohnathonLubaway.json" />
     <Content Include="src\server\data\learners\PatrickKallas.json" />
-    <Content Include="__tests__\endToEnd\test.js" />
-    <Content Include="__tests__\integration\test.js" />
-    <Content Include="__tests__\testingEnvironment\actions\indexHelper.js" />
-    <Content Include="__tests__\testingEnvironment\data\indexHelper.js" />
-    <Content Include="__tests__\testingEnvironment\reducers\indexHelper.js" />
-    <Content Include="__tests__\testingEnvironment\reducers\reducer-learnerHelper.js" />
+    <Content Include="test\endToEnd\test.js" />
+    <Content Include="test\integration\test.js" />
+    <Content Include="test\testingEnvironment\actions\indexHelper.js" />
+    <Content Include="test\testingEnvironment\data\indexHelper.js" />
+    <Content Include="test\testingEnvironment\reducers\indexHelper.js" />
+    <Content Include="test\testingEnvironment\reducers\reducer-learnerHelper.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".github\" />
@@ -282,13 +283,13 @@
     <Folder Include="dist\" />
     <Folder Include="src\mead\" />
     <Folder Include="src\mead\middleware\" />
-    <Folder Include="__tests__" />
-    <Folder Include="__tests__\endToEnd" />
-    <Folder Include="__tests__\integration" />
-    <Folder Include="__tests__\testingEnvironment" />
-    <Folder Include="__tests__\testingEnvironment\actions" />
-    <Folder Include="__tests__\testingEnvironment\data" />
-    <Folder Include="__tests__\testingEnvironment\reducers" />
+    <Folder Include="test\" />
+    <Folder Include="test\endToEnd\" />
+    <Folder Include="test\integration\" />
+    <Folder Include="test\testingEnvironment\" />
+    <Folder Include="test\testingEnvironment\actions\" />
+    <Folder Include="test\testingEnvironment\data\" />
+    <Folder Include="test\testingEnvironment\reducers\" />
     <Folder Include="bin" />
     <Folder Include="obj" />
     <Folder Include="obj\Debug" />

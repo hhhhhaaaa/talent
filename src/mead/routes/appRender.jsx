@@ -1,11 +1,11 @@
-import React from 'react';
+﻿import React from 'react';
 import { renderRoutes } from 'react-router-config';
 import routes from './routes.jsx';
 
 const App = () => (
-    <div>
-        {renderRoutes(routes)}
-    </div>
+  <div>
+    {renderRoutes(routes)}
+  </div>
 );
 
 export default App;
